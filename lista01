@@ -1,0 +1,179 @@
+exercicio 1
+
+1. ler as  notas (nota 1 + nota 2 + nota 3)
+2. Somar as 3 notas do aluno( nota 1+ nota 2 + nota 3)
+3. dividir por 3 vai ser igual à média
+4. imprime a média
+5. se 'média' for maior ou igual a 6, imprime ('aprovado')
+6. se 'média' for menor que 6, imprime ('reprovado')
+
+exercicio 2
+
+1.ler o numero de jogos a serem jogados
+2.ler o numero total de pessoas.
+3.ler a porcentagem de pessoas na categoria popular
+4.ler a porcentagem de pessoas na categoria Geral
+5.ler a porcentagem de pessoas na categoria Arquibancada
+6.ler a porcentagem de pessoas na categoria cadeiras
+7.multiplicar o valor de cada porcentagem pelo numero total de pessoas para descobir o numero exato de pessoas em cada categoria
+8.multiplicar o valor anteriormente encontrado pelo preço do ingresso individual de cada categoria
+9.somar todos os resultados das 4 categorias
+10.imprimir o valor total em cada jogo
+
+exercicio 3
+
+1. ler o numero 1
+2. ler o numero 2
+3. ler o numero 3
+4. concatenar os 3 numeros de modo que 'numero 1' seja centena,'numero 2' seja dezena e 'numero 3' seja unidade
+5. imprimir o numero referente(n)
+6. ler e imprimir 'n' ao quadrado
+7. se numero 1 for = 0, imprimir 'DIGITO INVÁLIDO'
+8. se numero 1,numero 2 ou numero 3 possuir 2 dígitos , imprimir 'DÍGITO INVÁLIDO'
+
+exercicio 4
+
+1. ler o valor do salario mínimo
+2. ler a quantidade kw gasta por uma residência
+3. ler a seguinte operação 'n' : 0,7 * quantidade de kw gasta por uma residencia
+4. ler a seguinte operação: valor do salario minimo*'n'/100 = valor em reais pago na conta de luz
+5. ler a seguinte operação: valor em reais pago na conta de luz/quantidade de kw gasta na residência = consumo por kw.
+6. imprimir o consumo por kw
+7. imprimir o valor em reais pago na conta de luz
+8. ler a seguinte operação: valor em reais pago na conta de luz * 90%
+9. imprimir o valor calculado na etapa 8, que será o valor com 10 porcento de desconto.
+
+exercicio 5
+
+Ler o número da conta do cliente
+ler o consumo de água por metros cúbicos
+ler o tipo de consumidor, que pode ser: Comercial(C) , Industrial(I) ou Residencial(R)
+o programa deverá realizar uma operação, de acordo com o tipo de consumidor que está utilizando o programa:
+se o cliente for "C", a conta a ser realizada será: se o consumo for maior que 80 metros cubicos = (consumo - 80)*0,25 + 500; se o consumo for menor que 80 metros cubicos = 500 reais
+se o cliente for "I", a conta a ser realizada será: se o consumo for maior que 100 metros cubicos = (consumo - 100)*0,04 + 800 ; se o consumo for menor que 100 metros cubicos = 800 reais
+se o cliente for "R", a conta a ser realizada será: 5 + consumo*0,05
+imprimir o numero da conta informado pelo cliente
+imprimir algum dos valores calculados nas etapas '4','5' ou '6' de acordo com o tipo de consumidor informado
+
+exercício 6
+
+ler o numero de temperaturas que serao adicionadas no programa.
+ler todas as temperaturas adicionadas pelo usuario, de acordo com o numero informado na etapa 1
+realizar o seguinte calculo em todas as linhas informadas: C = 5(F-32)/9, com F sendo o valor informado em cada uma das linhas de entrada
+dada a operacao anterior, com o resultado adquirido, imprimir em cada linha a seguinte frase: X fahrenheit ( valor informado na linha em questao, em fahrenheit) equivale a x CELSIUS( valor calculado pelo programa em cada linha em questão)
+
+exercicio 7
+
+ler a temperatura em fahrenheit(float)
+ler a quantidade de chuva informada em polegada(float)
+realizar a seguinte operação para conversao de fahrenheit para celsius > C=(5F-160)/9, em que C é a temperatura em celsius e F é a temperatura em fahrenheit
+realizar outra operação para conversao de polegadas para mílimetros > P*M, em que P é o numero em polegadas e M é o numero em mílimetros
+imprimir "O valor em celsius é = C"
+imprimir "A quantidade de chuva é = M"
+
+exercicio 8
+
+ler o valor do raio da lata (em metros)(R)
+ler o valor da altura da lata (em metros)(H)
+efetuar a seguinte operação > 2(3.14R²)
+efetuar outra operação > (2RH*3.14)
+somar as duas operações anteriores = XXX.XX
+Imprimir o valor do custo da lata como sendo o resultado "XXX.XX"
+
+exercicio 9
+
+ler o valor do coeficiente A(eq 2 grau)
+ler o valor do coeficiente B(eq 2 grau)
+ler o valor do coeficiente C(eq 2 grau)
+realizar a seguinte operação > delta(X) = B²-4AC
+imprimir o valor calculado "X", que será igual ao delta desejado pelo programa
+
+exercicio 10
+
+ler o valor da primeira incognita da matriz quadrada "a"
+ler o valor da segunda incognita "b"
+ler o valor da terceira incognita (ja na segunda linha) "c"
+ler o valor da quarta incognita ( tambem na segunda linha) "d"
+efetuar o calculo > D= ad - bc
+imprimir a seguinte frase "O valor do determinante é = D(float)"
+
+exercicio 11
+
+ler o numero informado pelo usuário
+verificar se o numero possui os algarismos "5" ou "0" em seu final
+caso nao tenha, imprimir "O numero nao é divisivel"
+caso tenha, verificar se a soma dos algorismos dos numeros é divisivel por 3
+caso seja, imprimir "o numero é divisivel"
+caso nao seja, imprimir "o numero não é divisivel"
+
+exercicio 12
+
+ler o numero de horas que o charrete foi utilizado
+realizar a divisao do numero por 3
+se nao houver resto, multiplicar por 10 e imprimir o valor encontrado
+se houver resto, multiplicar o resultado por 10 e o resto por 5, somar e imprimir o resultado.
+
+exercicio 13
+
+ler a nota do mestrando(float) (X)
+se a nota estiver entre 9 e 10 = "A"
+se a nota estiver entre 7.5 e 8.9 = "B"
+se a nota estiver 6 e 7.4 = "C"
+se a nota estiver entre 0 e 5.9 = "D"
+imprimir a nota
+imprimir "Nota = "X" "CONCEITO = "conceito de acordo com a nota"
+
+exercicio 14
+
+ler o numero informado correspondente à altura da pirâmide(h)(metros)(float)
+ler o numero informado correspondente à aresta do hexagono(a)(metros)(float)
+efetuar o seguinte calculo de área da base(AB) >AB = 3a²raiz de 3/2
+com o resultado do calculo anterior efeutuar o calculo do volume(V) > V=AB*h/3
+imprimir " O volume da piramide é = "V""
+
+exercicio 15
+
+ler um valor inteiro entre 5 e 2000
+mapear todos os numeros pares de 1 até o numero em questao
+ler para todos os numeros (n + 2)², em que n é o numero anterior á ele
+imprimir n²= resultado para cada numero par em questão
+
+exercicio 16
+
+ler o salario do funcionário
+se o salario for menor ou igual a 300 reais, realizar a seguinte operação > salario*1.5
+se o salario for maior que 300 reais, realizar a seguinte operação > salario*1.3
+imprimir "Salario com reajuste = "valor calculado na etapa 1 ou 2" "
+
+exercicio 17
+
+ler o primeiro numero "x"
+ler o segundo numero "y"
+se "x" não for um numero par, imprimir "O primeiro numero nao é par"
+se "x" for um numero par, prosseguir com o programa
+quando "x" for par, "y" será a quantidade de números pares subsequentes a "x"
+imprimir todos os números pares subsequentes a "x" de acordo com a quantidade determinada por "y"
+Clique duas vezes (ou pressione "Enter") para editar
+
+exercicio 18
+
+ler o numero inicial da progressao aritmetica (n1)
+ler a razão da progressao aritmetica(r)
+ler o numero de termos que a progressao aritmetica possui(n)
+efetuar o calculo > SN = (2.n1+r.n-r)n/2
+imprimir o resultado da operação "SN"(int)
+
+exercicio 19
+
+ler um numero "n" inteiro e positivo
+se "n" for menor ou igual a 1, imprimir:"numero inválido!"
+senão, para cada inteiro "k" de 1 até "n", adicionar 1/k até "n"
+imprimir a soma anterior com 6 casas decimais(float)
+
+exercicio 20
+
+ler o tempo informado em horas(H)
+ler o tempo informado em minutos(M)
+ler o tempo informado em segundos(S)
+realizar a seguinte operação > Tempo total(TT) = H.3600+M.60+S
+imprimir a seguinte frase "O tempo em segundos é = "TT""
