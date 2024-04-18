@@ -1,0 +1,572 @@
+// EXERCICIO 1
+package main
+
+import "fmt"
+
+var n1, n2, n3 float64
+
+func main() {
+
+	fmt.Println("digite sua primeira nota (n1):")
+	fmt.Scanln(&n1)
+	fmt.Println("digite sua primeira nota (n2):")
+	fmt.Scanln(&n2)
+	fmt.Println("digite sua primeira nota (n3):")
+	fmt.Scanln(&n3)
+
+	media := (n1 + n2 + n3) / 3
+	fmt.Println("A média é:", media)
+
+	if media >= 6.0 {
+		fmt.Println("aprovado")
+
+	} else {
+		fmt.Println("reprovado")
+	}
+
+}
+// EXERCICIO 2
+package main
+
+import "fmt"
+
+var n, njogos, np, pcp, pcg, pca, pcc float64
+
+func main() {
+
+	fmt.Println("digite o número de jogos a serem jogados:")
+	fmt.Scanln(&n)
+
+	njogos = 1
+
+	for njogos <= n {
+		njogos = njogos + 1
+
+		fmt.Println("digite o numero total de pessoas:")
+		fmt.Scanln(&np)
+		fmt.Println("digite a porcentagem de pessoas na categoria popular:")
+		fmt.Scanln(&pcp)
+		fmt.Println("digite a porcentagem de pessoas na categoria geral")
+		fmt.Scanln(&pcg)
+		fmt.Println("digite a porcentagem de pessoas na categoria arquibancada:")
+		fmt.Scanln(&pca)
+		fmt.Println("Digite a porcentagem de pessoas na categoria cadeiras:")
+		fmt.Scanln(&pcc)
+
+		popular := np * (pcp / 100)
+
+		geral := np * (pcg / 100)
+
+		arquibancada := np * (pca / 100)
+
+		cadeiras := np * (pcc / 100)
+
+		vpp := popular * 1
+
+		vpa := arquibancada * 10
+
+		vpg := geral * 5
+
+		vpc := cadeiras * 20
+
+		vtt := vpp + vpa + vpg + vpc
+
+		if pcp+pcg+pca+pcc == 100 {
+			fmt.Println("o valor total pago é:", vtt, "reais")
+
+		} else {
+			fmt.Println("numeros inválidos!!")
+		}
+	}
+}
+// EXERCICIO 3
+package main
+
+import "fmt"
+
+var n1, n2, n3, x, y int
+
+func main() {
+	fmt.Println("digite 1 numero:")
+	fmt.Scanln(&n1)
+	fmt.Println("digite mais um numero:")
+	fmt.Scanln(&n2)
+	fmt.Println("digite mais um numero:")
+	fmt.Scanln(&n3)
+
+	if n1 < 0 || n1 > 9 || n2 < 0 || n2 > 9 || n3 < 0 || n3 > 9 {
+		fmt.Println("formato inválido")
+	}
+
+	x = n1*100 + n2*10 + n3
+	y = x * x
+	fmt.Println(x, ",", y)
+
+}
+// EXERCICIO 4
+package main
+
+import "fmt"
+
+var x, y, n, vrp, ckw, vcd float64
+
+func main() {
+
+	fmt.Println("Digite o valor do sálario mínimo:")
+	fmt.Scanln(&x)
+	fmt.Println("digite a quantidade de kw gasta:")
+	fmt.Scanln(&y)
+	n = 0.7 * y
+	vrp = x * n / 100
+	ckw = vrp / y
+	fmt.Println("custo por KW:", ckw, "valor em reais pago:", vrp)
+	vcd = vrp * 0.9
+	fmt.Println("valor com desconto:", vcd)
+
+}
+// EXERCICIO 5
+package main
+
+import "fmt"
+
+var n int
+var c float64
+var tipo string
+var comercial float64
+var industrial float64
+var residencial float64
+
+func main() {
+
+	fmt.Println("Digite o numero da sua conta:")
+	fmt.Scanln(&n)
+
+	fmt.Println("Digite a quantidade de agua consumida em metros cubicos:")
+	fmt.Scanln(&c)
+
+	fmt.Println("Digite o seu tipo de consumidor C(comercial),I(industrial),R(residencial):")
+	fmt.Scanln(&tipo)
+
+	fmt.Println("CONTA = ", n)
+
+	if tipo == "C" {
+		if c > 80 {
+			comercial = (c-80)*0.25 + 500
+			fmt.Println("VALOR DA CONTA = ", comercial)
+		} else {
+			fmt.Println("VALOR DA CONTA = 500 reais")
+		}
+	}
+	if tipo == "I" {
+		if c > 100 {
+			industrial = (c-100)*0.04 + 800
+			fmt.Println("VALOR DA CONTA =", industrial, "reais")
+		} else {
+			fmt.Println("VALOR DA CONTA = 800 reais")
+		}
+	}
+	if tipo == "R" {
+		residencial = (c * 0.05) + 5
+		fmt.Println("VALOR DA CONTA =", residencial, "reais")
+	}
+
+	if tipo != "I" && tipo != "C" && tipo != "R" {
+
+		fmt.Println("formato inválido!!!")
+	}
+}
+// EXERCICIO 6
+package main
+
+import "fmt"
+
+var t1, n, nfor, f float64
+
+func main() {
+
+	fmt.Println("digite o numero de temperaturas a serem convertidas para Celsius:")
+	fmt.Scanln(&n)
+
+	nfor = 0
+
+	for nfor < n {
+
+		nfor = nfor + 1
+
+		fmt.Println("digite a temperatura a ser convertida:")
+		fmt.Scanln(&t1)
+
+		f = (5 * (t1 - 32)) / 9
+
+		fmt.Println(t1, "FAHRENHEIT EQUIVALE A ", f, "CELSIUS")
+	}
+}
+// EXERCICIO 7
+
+package main
+
+import "fmt"
+
+var f, c, t, p float64
+
+func main() {
+
+	fmt.Println("digite o valor em Fahrenheit a ser convertido para Celsius:")
+	fmt.Scanln(&f)
+	fmt.Println("digite o valor em polegada para ser convertido a milimetros:")
+	fmt.Scanln(&c)
+
+	t = (5*f - 160) / 9
+
+	p = c * 25.4
+
+	fmt.Println("o seu valor em Celsius é:", t)
+	fmt.Println("o seu valor em milimetros é", p)
+
+}
+// EXERCICIO 8
+
+package main
+
+import "fmt"
+
+var r, h, ac, at, s2, c float64
+
+func main() {
+
+	fmt.Println("digite o valor do raio da lata de cerveja( em metros):")
+	fmt.Scanln(&r)
+	fmt.Println("digite o valor da altura da lata de cerveja( em metros):")
+	fmt.Scanln(&h)
+	pi := 3.14159
+	ac = 2 * (pi * r * r)
+	at = (2 * r * h * pi)
+	s2 = ac + at
+	c = s2 * 100
+
+	fmt.Println("O custo da lata é:", c, "reais")
+
+}
+
+// EXERCICIO 9
+
+package main
+
+import "fmt"
+
+var A, B, C, delta float64
+
+func main() {
+
+	fmt.Println("Digite o valor do coeficiente A:")
+	fmt.Scanln(&A)
+	fmt.Println("Digite o valor do coeficiente B:")
+	fmt.Scanln(&B)
+	fmt.Println("Digite o valor do coeficiente C:")
+	fmt.Scanln(&C)
+
+	delta = B*B - 4*A*C
+
+	fmt.Printf("o valor de delta é:%.2f", delta)
+
+}
+
+// EXERCICIO 10
+
+package main
+
+import "fmt"
+
+var a, b, c, d, det float64
+
+func main() {
+
+	fmt.Println("Digite o valor dos coeficientes da primeira linha(separado por vírgulas):")
+	fmt.Scanln(&a)
+	fmt.Scanln(&b)
+	fmt.Println("Digite o valor dos coeficientes da segunda linha(separado por vírgulas):")
+	fmt.Scanln(&c)
+	fmt.Scanln(&d)
+
+	det = a*d - b*c
+
+	fmt.Printf("o valor do determinante é:%.2f", det)
+
+}
+// EXERCICIO 11
+
+package main
+
+import "fmt"
+
+var x int
+
+func main() {
+
+	fmt.Println("digite um numero inteiro:")
+	fmt.Scanln(&x)
+
+	if x%3 == 0 && x%5 == 0 {
+
+		fmt.Println("O número é divisível")
+	} else {
+
+		fmt.Println("O número não é divisível")
+	}
+
+}
+// EXERCICIO 12 
+
+package main
+
+import "fmt"
+
+var h, x1, x2, x3 int
+
+func main() {
+
+	fmt.Println("Digite o numero de horas que a charrete foi usada:")
+	fmt.Scanln(&h)
+
+	if h%3 == 0 {
+
+		x1 = (h / 3) * 10
+		fmt.Printf("o valor a pagar é:%.2f", x1, "reais")
+
+	} else {
+
+		x2 = h % 3
+		x3 = (h/3)*10 + x2*5
+		fmt.Println("O VALOR A SER PAGO É:", x3, "REAIS")
+
+	}
+
+}
+// EXERCICIO 13
+
+package main
+
+import "fmt"
+
+var n float64
+
+func main() {
+
+	fmt.Println("Digite sua nota:")
+	fmt.Scanln(&n)
+
+	if n >= 0.0 && n < 6.0 {
+
+		fmt.Println("NOTA = ", n, "CONCEITO = D")
+	}
+	if n >= 6 && n < 7.5 {
+
+		fmt.Println("NOTA = ", n, "CONCEITO = C")
+	}
+	if n >= 7.5 && n < 9 {
+
+		fmt.Println("NOTA = ", n, "CONCEITO = B ")
+	}
+	if n >= 9 && n <= 10 {
+
+		fmt.Println("NOTA = ", n, "CONCEITO = A")
+	}
+	if n < 0 || n > 10 {
+
+		fmt.Println("FORMATO INVÁLIDO!!!!")
+	}
+}
+
+// EXERCICIO 14
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+var h, a, areadabase, v float64
+
+func main() {
+
+	fmt.Println("Digite a altura da pirâmide(em metros):")
+	fmt.Scanln(&h)
+	fmt.Println("Digite o comprimento da aresta do hexagono que forma a pirâmide(em metros):")
+	fmt.Scanln(&a)
+
+	areadabase = (a * a * 3 * math.Sqrt(3)) / 2
+	v = (areadabase * h) / 2
+
+	fmt.Println("O volume da pirâmide é:", v, "metros cubicos")
+
+}
+
+
+// EXERCICIO 15
+
+package main
+
+import "fmt"
+
+var n, x, z int
+
+func main() {
+
+	fmt.Println("Digite um numero inteiro N (maior que 5 e menor que 2000):")
+	fmt.Scanln(&n)
+
+	if n < 5 || n > 2000 {
+
+		fmt.Println("Valor inválido:")
+	}
+
+	x = 0
+
+	for x <= n {
+
+		if (x+2)%2 == 0 {
+
+			z = x * x
+			fmt.Println(x, z)
+
+		}
+		x++
+	}
+
+}
+// EXERCICIO 16
+
+package main
+
+import "fmt"
+
+var salario, c1, c2 float64
+
+func main() {
+
+	fmt.Println("Digite o valor do seu salário:")
+	fmt.Scanln(&salario)
+
+	if salario <= 300 {
+
+		c1 = salario * 1.5
+		fmt.Println("O salário com reajuste é:%.2f", c1, "reais")
+
+	} else {
+
+		c2 = salario * 1.3
+		fmt.Printf("O salário com reajuste é:%.2f reais", c2)
+	}
+
+}
+// EXERCICIO 17 
+
+package main
+
+import "fmt"
+
+var x, y, z int
+
+func main() {
+
+	fmt.Println("Digite o número que deseja partir:")
+	fmt.Scanln(&x)
+	fmt.Println("Digite o número de numeros subsequentes a este que vc deseja que apareça:")
+	fmt.Scanln(&y)
+
+	if x%2 != 0 {
+
+		fmt.Println("O PRIMEIRO NUMERO NÃO É PAR")
+	} else {
+		for z := 0; z < y; z++ {
+
+			fmt.Println(x)
+			x += 2
+		}
+	}
+
+}
+// EXERCICIO 18
+
+package main
+
+import "fmt"
+
+var n1, r, n, sn float64
+
+func main() {
+
+	fmt.Println("Digite o numero inicial(n1)da sua progressão aritmetica:")
+	fmt.Scanln(&n1)
+	fmt.Println("Digite a razão da sua progressão aritmética:")
+	fmt.Scanln(&r)
+	fmt.Println("Digite o numero de termos da sua progressão aritmetica:")
+	fmt.Scanln(&n)
+
+	sn = (2*n1 + r*n - r)*n / 2
+
+	fmt.Println("A soma da sua progressão aritmética é:", sn)
+
+}
+// EXERCICIO 19
+
+package main
+
+import "fmt"
+
+var n, x, z, y float64
+
+func main() {
+
+	fmt.Println("Digite um numero(inteiro):")
+	fmt.Scanln(&n)
+
+	if n < 1 {
+		fmt.Println("formato invalido!!!!!")
+	}
+	y = 0
+
+	for x = 1; x <= n; x++ {
+
+		y += 1 / x
+
+	}
+	fmt.Println("a soma de 1/n numeros ate y é:", y)
+
+}
+
+// EXERCICIO 20
+
+
+package main
+
+import "fmt"
+
+var x, y, b int
+
+func main() {
+
+	fmt.Println("digite um numero x :")
+	fmt.Scanln(&x)
+	fmt.Println("digite um numero y:")
+	fmt.Scanln(&y)
+
+	if x%2 == 0 {
+
+		b = 0
+		fmt.Println("")
+		for a := 0; a < y; a++ {
+
+			fmt.Println("\n", x+b)
+			b += 2
+
+		}
+
+	}
+
+}
+
+
+
+
