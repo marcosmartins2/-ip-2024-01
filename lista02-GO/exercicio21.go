@@ -20,18 +20,22 @@ func main() {
 			fmt.Scan(&array[i])
 
 		}
-		for i := 0; i < n-1; i++ {
+		ordenada := true
+
+		for i := 0; i < n-1 && ordenada == true; i++ {
 
 			if array[i] > array[i+1] {
-				fmt.Println("não é ordenada")
-				break
-
-			} else if array[n-2] < array[n-1] {
-				fmt.Println("ORDENADA")
-				break
+				ordenada = false
 
 			}
 
 		}
+		if ordenada {
+			fmt.Println("ORDENADA")
+		} else {
+			fmt.Println("DESORDENADA")
+		}
+
 	}
 }
+
