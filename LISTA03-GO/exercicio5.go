@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var n, vetor2 int
+var n, vetor2, i2 int
 
 func main() {
 
@@ -26,10 +26,11 @@ func main() {
 			if vetor[i] > vetor[i-1] {
 
 				vetor2 = vetor[i]
+				i2 = i
 			}
 
 		}
-		fmt.Println(vetor2)
+		fmt.Println(i2, vetor2)
 
 	}
 
