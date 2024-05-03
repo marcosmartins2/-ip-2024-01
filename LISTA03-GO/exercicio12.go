@@ -19,7 +19,11 @@ func main() {
 
 	}
 	sort.Ints(vetor)
+	fmt.Println("-----------------")
 
-	fmt.Println(vetor)
+	for j := 0; j < n; j++ {
 
+		fmt.Println(vetor[j])
+
+	}
 }
