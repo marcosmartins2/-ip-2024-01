@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 var n int
@@ -18,12 +17,26 @@ func main() {
 		fmt.Scanln(&vetor[i])
 
 	}
-	sort.Ints(vetor)
-	fmt.Println("-----------------")
+	ordenar := ordenarnumeros(vetor)
+	fmt.Println(ordenar)
+}
 
-	for j := 0; j < n; j++ {
+func ordenarnumeros(vetor []int) []int {
 
-		fmt.Println(vetor[j])
+	for i := 1; i < n; i++ {
+
+		for j := 0; j < n; j++ {
+
+			if vetor[j] > vetor[i] {
+
+				vetor[j], vetor[i] = vetor[i], vetor[j]
+
+			}
+
+		}
 
 	}
+
+	return vetor
+
 }
