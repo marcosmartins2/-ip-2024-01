@@ -25,7 +25,7 @@ func main(){
         
     }
     sort.Ints(slice)
-    numero := slice[n-1]
+    
     
     for j:=0;j<n;j++{
         cont = 0
