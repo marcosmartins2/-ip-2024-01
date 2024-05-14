@@ -20,23 +20,25 @@ func main() {
 	for i := 0; i < q2; i++ {
 		fmt.Scanln(&slice2[i])
 	}
-	crescente(slice1)
-	crescente(slice2)
+	ordenarnumeros(slice1)
+	ordenarnumeros(slice2)
 	fmt.Println("----------------")
 	j := 0
 	k := 0
 	continuar := true
+	slice3 := make([]int, 0)
+	fmt.Println(slice3)
 	for continuar {
 
 		if j < len(slice1) && (k >= len(slice2) || slice1[j] < slice2[k]) {
-			fmt.Println(slice1[j])
+			slice3 = append(slice3, slice1[j])
 			j++
 			if j == len(slice1) && k == len(slice2) {
 				continuar = false
 			}
 			continue
 		} else if k < len(slice2) {
-			fmt.Println(slice2[k])
+			slice3 = append(slice3, slice2[k])
 			k++
 			if k == len(slice2) && j == len(slice1) {
 				continuar = false
@@ -46,10 +48,12 @@ func main() {
 
 	}
 
+	fmt.Println(slice3)
+
 }
 
-func crescente(vetor []int) []int {
-
+func ordenarnumeros(vetor []int) []int {
+	n = len(vetor)
 	for i := 1; i < n; i++ {
 
 		for j := 0; j < n; j++ {
@@ -67,3 +71,4 @@ func crescente(vetor []int) []int {
 	return vetor
 
 }
+
