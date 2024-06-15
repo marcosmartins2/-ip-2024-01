@@ -1,0 +1,46 @@
+ex 1 package main 
+
+import"fmt"
+
+
+func main(){
+    
+    
+   resultado:= pot(2,3)
+    fmt.Println(resultado)
+    
+    
+}
+
+
+
+func pot(x,n int )int  {
+    
+    if n == 0{
+        return 1
+    }
+    
+    return x * pot(x,n-1)
+    
+    
+}
+ex 2
+
+package main
+import "fmt"
+
+func main() {
+    
+    
+    total := []int{2,3,4,5,6}
+    fmt.Print(soma(total))
+}
+
+func soma (x []int)int{
+    
+if len(x)==0{
+    return 0
+}
+    return x[0]+soma(x[1:])
+    
+}
