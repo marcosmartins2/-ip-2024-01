@@ -1,0 +1,141 @@
+Exercicio 1
+
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+
+func inverterString(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
+}
+
+
+func inverterFrase(frase string) string {
+	palavras := strings.Fields(frase) 
+	for i := 0; i < len(palavras); i++ {
+		palavra := palavras[i]
+		palavras[i] = inverterString(palavra) 
+	}
+	for i := 0; i < len(palavras)/2; i++ {
+		palavras[i], palavras[len(palavras)-i-1] = palavras[len(palavras)-i-1], palavras[i]
+	}
+	return strings.Join(palavras, " ") 
+}
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	
+	fmt.Println("Digite as frases com palavras invertidas. Pressione Enter em uma linha vazia para finalizar:")
+
+	for scanner.Scan() {
+		linha := scanner.Text()
+		if linha == "" {
+			break
+		}
+		fraseCorrigida := inverterFrase(linha)
+		fmt.Println(fraseCorrigida)
+	}
+}
+
+exercicio 2
+
+
+package main
+
+import (
+	"fmt"
+)
+
+
+func troca(v []int, x, y int) {
+	v[x], v[y] = v[y], v[x]
+}
+
+
+func trocaOpostosSeMenor(v []int) {
+	n := len(v)
+	for i := 0; i < n/2; i++ {
+		oposto := n - 1 - i
+		if v[i] > v[oposto] {
+			troca(v, i, oposto)
+		}
+	}
+}
+
+func main() {
+	var casos int
+	fmt.Scanln(&casos)
+
+	for c := 0; c < casos; c++ {
+		var n int
+		fmt.Scanln(&n)
+
+		vetor := make([]int, n)
+		for i := 0; i < n; i++ {
+			fmt.Scan(&vetor[i])
+		}
+
+		
+		trocaOpostosSeMenor(vetor)
+
+		
+		for i := 0; i < n; i++ {
+			fmt.Printf("%d ", vetor[i])
+		}
+		fmt.Println()
+	}
+}
+
+
+exercicio 3
+
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var n int
+
+	fmt.Println("Digite o tamanho do vetor:")
+	fmt.Scanln(&n)
+
+	vetor := make([]int, n)
+
+	fmt.Println("digite os valores do vetor separados por um enter:")
+	for i := 0; i < n; i++ {
+		fmt.Scanln(&vetor[i])
+	}
+	ordenar(vetor)
+
+	fmt.Println(vetor)
+
+}
+
+func ordenar(vetor []int) []int {
+
+	for i := 0; i < len(vetor); i++ {
+
+		for j := 0; j < len(vetor); j++ {
+
+			if vetor[i] < vetor[j] {
+				vetor[i], vetor[j] = vetor[j], vetor[i]
+			}
+
+		}
+
+	}
+	return vetor
+
+}
+
